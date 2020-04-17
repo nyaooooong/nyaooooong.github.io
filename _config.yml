@@ -1,15 +1,17 @@
 # Setup
-title:               냐웅냐웅
-tagline:             '어쩌란 말인가...'
-description:         '냐웅냐웅의 블로그'
-url:                 https://nyaooooong.github.io
-baseurl:             ''
-paginate:            1
-permalink:           pretty
+title:                      냐웅냐웅
+tagline:                    '어쩌란 말인가...'
+description:                '냐웅냐웅의 블로그'
+url:                        https://nyaooooong.github.io
+baseurl:                    / 
+paginate:                   3
+permalink:                  pretty
+sass:
+    sass_dir:               _sass
 
 # About/contact
 author:
-  name:              Not Real Name
+  name:                     Not Real Name
   url:               
   email:             
 
@@ -18,5 +20,5 @@ plugins:
   - jekyll-paginate
 
 # Custom vars
-version:             1.0.0
+version:                    1.0.0
 google_analytics_id: 
