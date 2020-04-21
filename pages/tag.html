@@ -1,0 +1,35 @@
+---
+layout: page
+title: Tag
+permalink: /tag/
+---
+
+<ul>
+  {% for tag in site.tags %}
+<div class="tags" style="display: none" id="{{ tag | first}}">
+  <h2 id="{{tag | first}}">{{tag | first}}</h2>
+  {% for posts in tag %}
+  {% for post in posts %}
+  {% if post.url %}
+  <li>
+    {{ post.date | date:"%F" }}.
+    <a class="title" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+  </li>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</div>
+  {% endfor %}
+</ul>
+<script>
+  var target = window.location.hash; //Get Anchor (#blog)
+	if (target.length === 0) {
+		var tags = document.getElementsByClassName("tags");
+		for (var i = 0; i < tags.length; i++)
+			tags[i].style.display = "block";
+	}
+	else {
+		target = target.substring(1, target.length); //remove '#'
+		document.getElementById(target).style.display = "block";
+	}
+</script>

@@ -1,0 +1,35 @@
+---
+layout: page
+title: Categories
+permalink: /category/
+---
+
+<ul>
+  {% for category in site.categories %}
+<div class="categories" style="display: none" id="{{ category | first}}">
+  <h2 id="{{category | first}}">{{category | first}}</h2>
+  {% for posts in category %}
+  {% for post in posts %}
+  {% if post.url %}
+  <li>
+    {{ post.date | date:"%F" }}.
+    <a class="title" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+  </li>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</div>
+  {% endfor %}
+</ul>
+<script>
+	var target = window.location.hash; //Get Anchor (#blog)
+	if (target.length === 0) {
+		var categories = document.getElementsByClassName("categories");
+		for (var i = 0; i < categories.length; i++)
+			categories[i].style.display = "block";
+	}
+	else {
+		target = target.substring(1, target.length); //remove '#'
+		document.getElementById(target).style.display = "block";
+	}
+</script>

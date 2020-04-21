@@ -3,11 +3,14 @@ title:                      냐웅냐웅
 tagline:                    '어쩌란 말인가...'
 description:                '냐웅냐웅의 블로그'
 url:                        https://nyaooooong.github.io
-baseurl:                    / 
+baseurl:                    '' 
 paginate:                   3
 permalink:                  pretty
 sass:
     sass_dir:               _sass
+
+category_dir:               category
+tag_dir:                    tag
 
 # About/contact
 author:
