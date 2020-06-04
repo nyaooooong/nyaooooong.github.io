@@ -12,6 +12,8 @@ sass:
 category_dir:               category
 tag_dir:                    tag
 
+port:                       8080
+
 # About/contact
 author:
   name:                     Not Real Name
@@ -22,6 +24,8 @@ author:
 plugins:
   - jekyll-paginate
 
+
 # Custom vars
 version:                    1.0.0
 google_analytics_id: 
+
